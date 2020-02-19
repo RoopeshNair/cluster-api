@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: roopeshnairclusterapi 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: roopeshnairclusterapi 
+    spec:
+      containers:
+        - name: roopeshnairclusterapi 
+          image: ronacr.azurecr.io/roopeshnairclusterapi
+          ports:
+          - containerPort: 80
